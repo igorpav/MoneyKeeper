@@ -13,6 +13,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
+import team.e.com.moneykeeper.R;
 import team.e.com.moneykeeper.fragments.CategoryFragment;
 import team.e.com.moneykeeper.fragments.ReportFragment;
 import team.e.com.moneykeeper.fragments.TodayFragment;

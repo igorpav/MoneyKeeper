@@ -86,5 +86,4 @@ public class SettingsFragment extends PreferenceFragment {
         }
         pref.setSummary(sharedPrefs.getString(key, defaultValue));
     }
-} {
 }
