@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper;
+package team.e.com.moneykeeper.providers;
 
 import android.content.SharedPreferences;
 import android.net.Uri;

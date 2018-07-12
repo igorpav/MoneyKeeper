@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper;
+package team.e.com.moneykeeper.providers;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 
-import team.e.com.moneykeeper.ExpensesContract;
+import team.e.com.moneykeeper.providers.ExpensesContract;
 
 /**
  * Created by igorpav on 12.07.18.
