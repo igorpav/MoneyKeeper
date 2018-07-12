@@ -87,6 +87,7 @@
     <string name="cat_pets">Питомцы</string>
     <string name="cat_presents">Подарки</string>
     <string name="cat_sports">Спорт</string>
+    <string name="cat_education">Образование</string>
     <string name="cat_transportation">Транспорт</string>
 
 </resources>
