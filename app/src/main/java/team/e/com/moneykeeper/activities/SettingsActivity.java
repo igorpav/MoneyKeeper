@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 
 import team.e.com.moneykeeper.activities.R;
-import team.e.com.moneykeeper.SettingsFragment;
+import team.e.com.moneykeeper.fragments.SettingsFragment;
 
 public class SettingsActivity extends BaseFragmentActivity {
 

@@ -1,1 +1,3 @@
-include ':app'
+include ':app', ':sectioncursoradapter', ':library'
+project(':sectioncursoradapter').projectDir = new File('SubProject/SectionCursorAdapter-master/sample')
+project(':library').projectDir = new File('SubProject/SectionCursorAdapter-master/library')
