@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import team.e.com.moneykeeper.R;
+
 /**
  * Created by igorpav on 12.07.18.
  */

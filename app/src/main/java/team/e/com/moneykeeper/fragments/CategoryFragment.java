@@ -1,7 +1,7 @@
 package team.e.com.moneykeeper.fragments;
 
 import android.app.AlertDialog;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.app.LoaderManager;
 import android.content.ContentUris;
 import android.content.CursorLoader;
@@ -23,6 +23,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
+
+import team.e.com.moneykeeper.R;
 
 /**
  * Created by igorpav on 11.07.18.
