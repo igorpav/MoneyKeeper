@@ -14,7 +14,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
 import team.e.com.moneykeeper.CategoryFragment;
-import team.e.com.moneykeeper.R;
+
 import team.e.com.moneykeeper.ReportFragment;
 import team.e.com.moneykeeper.TodayFragment;
 
