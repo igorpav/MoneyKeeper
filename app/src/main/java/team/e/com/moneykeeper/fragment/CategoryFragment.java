@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper;
+package team.e.com.moneykeeper.fragment;
 
 /**
  * Created by igorpav on 11.07.18.

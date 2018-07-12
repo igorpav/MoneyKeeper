@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper;
+package team.e.com.moneykeeper.fragment;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
