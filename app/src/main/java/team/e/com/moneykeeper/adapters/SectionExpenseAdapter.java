@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import team.e.com.moneykeeper.R;
 import team.e.com.moneykeeper.providers.ExpensesContract;
 import team.e.com.moneykeeper.utils.Utils;
 import com.twotoasters.sectioncursoradapter.SectionCursorAdapter;
