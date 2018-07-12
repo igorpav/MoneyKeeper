@@ -28,7 +28,10 @@ import android.widget.Toast;
 
 import java.util.Date;
 
+import team.e.com.moneykeeper.activities.ExpenseEditActivity;
 import team.e.com.moneykeeper.adapters.SimpleExpenseAdapter;
+import team.e.com.moneykeeper.providers.ExpensesContract;
+import team.e.com.moneykeeper.utils.Utils;
 
 /**
  * Created by igorpav on 11.07.18.
@@ -144,10 +147,10 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
         Uri uri = null;
         switch (id) {
             case SUM_LOADER_ID:
-                uri = ExpensesWithCategories.SUM_DATE_CONTENT_URI;
+                uri = ExpensesContract.ExpensesWithCategories.SUM_DATE_CONTENT_URI;
                 break;
             case LIST_LOADER_ID:
-                uri = ExpensesWithCategories.DATE_CONTENT_URI;
+                uri = ExpensesContract.ExpensesWithCategories.DATE_CONTENT_URI;
                 break;
         }
 
@@ -168,7 +171,7 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         switch (loader.getId()){
             case SUM_LOADER_ID:
-                int valueSumIndex = data.getColumnIndex(Expenses.VALUES_SUM);
+                int valueSumIndex = data.getColumnIndex(ExpensesContract.Expenses.VALUES_SUM);
                 data.moveToFirst();
                 float valueSum = data.getFloat(valueSumIndex);
                 mTotalExpSumTextView.setText(Utils.formatToCurrency(valueSum));
@@ -212,7 +215,7 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
     }
 
     private int deleteSingleExpense(long expenseId) {
-        Uri uri = ContentUris.withAppendedId(Expenses.CONTENT_URI, expenseId);
+        Uri uri = ContentUris.withAppendedId(ExpensesContract.Expenses.CONTENT_URI, expenseId);
 
         // Defines a variable to contain the number of rows deleted
         int rowsDeleted;
