@@ -9,7 +9,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 
-import team.e.com.moneykeeper.providers.ExpensesContract;
+import team.e.com.moneykeeper.db.ExpenseDbHelper;
+import team.e.com.moneykeeper.providers.ExpensesContract.Categories;
+import team.e.com.moneykeeper.providers.ExpensesContract.Expenses;
+import team.e.com.moneykeeper.providers.ExpensesContract.ExpensesWithCategories;
+
+import static team.e.com.moneykeeper.db.ExpenseDbHelper.EXPENSES_TABLE_NAME;
+import static team.e.com.moneykeeper.db.ExpenseDbHelper.CATEGORIES_TABLE_NAME;
 
 /**
  * Created by igorpav on 12.07.18.
