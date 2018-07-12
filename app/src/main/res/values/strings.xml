@@ -59,14 +59,13 @@
     <string name="total_string">Всего</string>
 
     <string name="pref_currency_title">Валюта</string>
-    <string name="pref_currency_default">USD</string>
+    <string name="pref_currency_default">RUB</string>
     <string-array name="pref_currency_list_titles">
         <item>Доллар США</item>
         <item>Евро</item>
         <item>Фунт стерлингов</item>
         <item>Канадский доллар</item>
         <item>Австралийский доллар</item>
-        <item>Украинская гривна</item>
         <item>Российский рубль</item>
     </string-array>
     <string-array name="pref_currency_list_values">
@@ -75,7 +74,6 @@
         <item>GBP</item>
         <item>CAD</item>
         <item>AUD</item>
-        <item>UAH</item>
         <item>RUB</item>
     </string-array>
 
