@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper.activity;
+package team.e.com.moneykeeper.activities;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;

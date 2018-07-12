@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper.activity;
+package team.e.com.moneykeeper.activities;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -13,9 +13,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
-import team.e.com.moneykeeper.fragment.CategoryFragment;
-import team.e.com.moneykeeper.fragment.ReportFragment;
-import team.e.com.moneykeeper.fragment.TodayFragment;
+import team.e.com.moneykeeper.fragments.CategoryFragment;
+import team.e.com.moneykeeper.fragments.ReportFragment;
+import team.e.com.moneykeeper.fragments.TodayFragment;
 
 public class MainActivity extends BaseFragmentActivity {
     private DrawerLayout mDrawerLayout;

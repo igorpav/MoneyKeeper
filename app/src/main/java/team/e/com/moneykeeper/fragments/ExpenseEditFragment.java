@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper.fragment;
+package team.e.com.moneykeeper.fragments;
 
 import android.content.ContentUris;
 import android.content.ContentValues;

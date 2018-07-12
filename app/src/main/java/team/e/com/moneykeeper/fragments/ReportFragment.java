@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper.fragment;
+package team.e.com.moneykeeper.fragments;
 
 import android.app.DatePickerDialog;
 import android.app.Fragment;
@@ -25,7 +25,10 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Date;
 
-import team.e.com.moneykeeper.activity.MainActivity;
+import team.e.com.moneykeeper.Utils;
+import team.e.com.moneykeeper.activities.MainActivity;
+import team.e.com.moneykeeper.adapters.SectionExpenseAdapter;
+import team.e.com.moneykeeper.providers.ExpensesContract;
 
 /**
  * Created by igorpav on 11.07.18.
@@ -147,17 +150,17 @@ public class ReportFragment extends Fragment implements LoaderManager.LoaderCall
         switch (id) {
             case SUM_LOADER_ID:
                 if (reportType == DATE_REPORT) {
-                    uri = ExpensesWithCategories.SUM_DATE_CONTENT_URI;
+                    uri = ExpensesContract.ExpensesWithCategories.SUM_DATE_CONTENT_URI;
                 } else if (reportType == DATE_RANGE_REPORT) {
-                    uri = ExpensesWithCategories.SUM_DATE_RANGE_CONTENT_URI;
+                    uri = ExpensesContract.ExpensesWithCategories.SUM_DATE_RANGE_CONTENT_URI;
                 }
                 break;
             case LIST_LOADER_ID:
                 mProgressBar.setVisibility(View.VISIBLE);
                 if (reportType == DATE_REPORT) {
-                    uri = ExpensesWithCategories.DATE_CONTENT_URI;
+                    uri = ExpensesContract.ExpensesWithCategories.DATE_CONTENT_URI;
                 } else if (reportType == DATE_RANGE_REPORT) {
-                    uri = ExpensesWithCategories.DATE_RANGE_CONTENT_URI;
+                    uri = ExpensesContract.ExpensesWithCategories.DATE_RANGE_CONTENT_URI;
                 }
                 break;
         }
@@ -175,7 +178,7 @@ public class ReportFragment extends Fragment implements LoaderManager.LoaderCall
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         switch (loader.getId()) {
             case SUM_LOADER_ID:
-                int valueSumIndex = data.getColumnIndex(Expenses.VALUES_SUM);
+                int valueSumIndex = data.getColumnIndex(ExpensesContract.Expenses.VALUES_SUM);
                 data.moveToFirst();
                 float valueSum = data.getFloat(valueSumIndex);
                 mTotalValueTextView.setText(Utils.formatToCurrency(valueSum));

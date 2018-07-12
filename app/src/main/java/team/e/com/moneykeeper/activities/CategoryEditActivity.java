@@ -1,12 +1,12 @@
-package team.e.com.moneykeeper.activity;
+package team.e.com.moneykeeper.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 
-import team.e.com.moneykeeper.fragment.ExpenseEditFragment;
+import team.e.com.moneykeeper.fragments.CategoryEditFragment;
 
-public class ExpenseEditActivity extends BaseFragmentActivity {
+public class CategoryEditActivity extends BaseFragmentActivity {
 
     /* Important: use onCreate(Bundle savedInstanceState)
      * instead of onCreate(Bundle savedInstanceState, PersistableBundle persistentState) */
@@ -14,7 +14,7 @@ public class ExpenseEditActivity extends BaseFragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        insertFragment(new ExpenseEditFragment());
+        insertFragment(new CategoryEditFragment());
         setupActionBar();
     }
 
@@ -26,3 +26,4 @@ public class ExpenseEditActivity extends BaseFragmentActivity {
         }
     }
 }
+

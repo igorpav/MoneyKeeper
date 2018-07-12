@@ -1,4 +1,4 @@
-package team.e.com.moneykeeper.fragment;
+package team.e.com.moneykeeper.fragments;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -27,6 +27,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Date;
+
+import team.e.com.moneykeeper.adapters.SimpleExpenseAdapter;
 
 /**
  * Created by igorpav on 11.07.18.
