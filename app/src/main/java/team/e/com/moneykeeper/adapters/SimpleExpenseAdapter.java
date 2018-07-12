@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import team.e.com.moneykeeper.providers.ExpensesContract;
 import team.e.com.moneykeeper.R;
-import team.e.com.moneykeeper.Utils;
+import team.e.com.moneykeeper.utils.Utils;
 
 public class SimpleExpenseAdapter extends CursorAdapter {
     private String mCurrency;

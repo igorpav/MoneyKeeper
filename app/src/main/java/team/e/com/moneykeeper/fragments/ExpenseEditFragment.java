@@ -27,7 +27,7 @@ import android.widget.Toast;
 import team.e.com.moneykeeper.providers.ExpensesContract.Categories;
 import team.e.com.moneykeeper.providers.ExpensesContract.Expenses;
 import team.e.com.moneykeeper.R;
-import team.e.com.moneykeeper.Utils;
+import team.e.com.moneykeeper.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Date;

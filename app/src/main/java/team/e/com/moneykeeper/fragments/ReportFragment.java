@@ -25,7 +25,7 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Date;
 
-import team.e.com.moneykeeper.Utils;
+import team.e.com.moneykeeper.utils.Utils;
 import team.e.com.moneykeeper.activities.MainActivity;
 import team.e.com.moneykeeper.adapters.SectionExpenseAdapter;
 import team.e.com.moneykeeper.providers.ExpensesContract;

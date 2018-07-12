@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import team.e.com.moneykeeper.R;
 import team.e.com.moneykeeper.providers.ExpensesContract;
-import team.e.com.moneykeeper.Utils;
+import team.e.com.moneykeeper.utils.Utils;
 import com.twotoasters.sectioncursoradapter.SectionCursorAdapter;
 
 public class SectionExpenseAdapter extends SectionCursorAdapter {
