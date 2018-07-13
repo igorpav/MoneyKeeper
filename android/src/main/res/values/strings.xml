@@ -45,8 +45,6 @@
     <string name="filter_option_today">За Сегодня</string>
     <string name="filter_option_week">За Неделю</string>
     <string name="filter_option_month">За Месяц</string>
-    <string name="filter_option_date">За Дату</string>
-    <string name="filter_option_range">За Период времени</string>
     <string name="filter_todays_expenses">Расходы за сегодня</string>
     <string name="filter_weeks_expenses">Расходы за неделю</string>
     <string name="filter_months_expenses">Расходы за месяц</string>

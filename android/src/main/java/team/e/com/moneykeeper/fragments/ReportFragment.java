@@ -129,12 +129,6 @@ public class ReportFragment extends Fragment implements LoaderManager.LoaderCall
             case R.id.month_filter_option:
                 makeMonthlyReport();
                 return true;
-            case R.id.date_filter_option:
-                makeDateReport();
-                return true;
-            case R.id.range_filter_option:
-                makeDateRangeReport();
-                return true;
             default:
                 return false;
         }
