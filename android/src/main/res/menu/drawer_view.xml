@@ -13,6 +13,10 @@
             android:id="@+id/nav_categories"
             android:icon="@drawable/ic_nav_categories"
             android:title="@string/nav_categories" />
+        <item
+            android:title="@string/nav_feedback"
+            android:id="@+id/nav_feedback"
+            />
     </group>
     <group android:id="@+id/group2" android:checkableBehavior="none">
         <item

@@ -90,5 +90,6 @@
     <string name="cat_transportation">Транспорт</string>
     <string name="cat_airplane">Авиабилеты</string>
     <string name="cat_hotels">Отели</string>
+    <string name="nav_feedback">Обратная связь</string>
 
 </resources>
