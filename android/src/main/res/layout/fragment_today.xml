@@ -25,11 +25,6 @@
                 android:textSize="18sp"
                 android:text="@string/today_total" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="#000000" />
-
         </LinearLayout>
 
         <RelativeLayout
@@ -46,7 +41,7 @@
                 android:layout_height="80dp"
                 android:gravity="start|center_vertical"
                 android:textSize="44sp"
-                android:singleLine="true"/>
+                android:singleLine="false"/>
 
             <TextView
                 android:id="@+id/total_expense_currency_text_view"
@@ -60,7 +55,7 @@
                 android:paddingLeft="0dp"
                 android:paddingStart="0dp"
                 android:textSize="22sp"
-                android:singleLine="true"
+                android:singleLine="false"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"/>
 
@@ -81,11 +76,6 @@
                 android:layout_marginBottom="2dp"
                 android:textSize="18sp"
                 android:text="@string/today_expenses" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="#000000" />
 
         </LinearLayout>
 
@@ -126,12 +116,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
-
-            <Button
-                android:id="@+id/add_expense_button_if_empty_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/add_expense"/>
 
         </LinearLayout>
 

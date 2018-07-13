@@ -70,12 +70,6 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
             }
         });
 
-        rootView.findViewById(R.id.add_expense_button_if_empty_list).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                prepareExpenseToCreate();
-            }
-        });
         mTotalExpSumTextView.setText(Utils.formatToCurrency(0.0f));
 
         registerForContextMenu(mExpensesView);

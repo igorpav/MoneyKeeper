@@ -18,8 +18,8 @@
     <string name="category_updated">Категория обновлена</string>
     <string name="category_name_string">Название категории</string>
 
-    <string name="today_total">Всего за сегодня</string>
-    <string name="today_expenses">Список расходов</string>
+    <string name="today_total">Всего за сегодня:</string>
+    <string name="today_expenses">Список расходов:</string>
 
     <string name="add_expense">Новый расход</string>
     <string name="edit_expense">Редактировать расход</string>

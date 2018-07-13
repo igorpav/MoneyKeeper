@@ -16,7 +16,7 @@
         android:paddingLeft="10dp"
         android:gravity="end|center_vertical"
         android:textSize="46sp"
-        android:singleLine="true"
+        android:singleLine="false"
         android:inputType="numberDecimal" />
 
     <LinearLayout
