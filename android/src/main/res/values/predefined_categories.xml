@@ -12,5 +12,6 @@
         <item>@string/cat_presents</item>
         <item>@string/cat_sports</item>
         <item>@string/cat_transportation</item>
+        <item>@string/cat_education</item>
     </string-array>
 </resources>
