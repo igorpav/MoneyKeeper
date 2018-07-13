@@ -22,8 +22,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:textSize="18sp"
-                android:text="@string/today_total" />
+                android:textSize="25sp"
+                android:text="@string/today_total"
+                android:textColor="#000033"/>
 
         </LinearLayout>
 
@@ -74,8 +75,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
-                android:textSize="18sp"
-                android:text="@string/today_expenses" />
+                android:textSize="25sp"
+                android:text="@string/today_expenses"
+                android:textColor="#000033"/>
 
         </LinearLayout>
 
