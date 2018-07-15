@@ -3,11 +3,9 @@ package team.e.com.moneykeeper.fragments;
 import android.content.ContentUris;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
@@ -81,9 +79,6 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        // Set default values for preferences (settings) on startup
-        PreferenceManager.setDefaultValues(getActivity(), R.xml.preferences, false);
-
         mAdapter = new SimpleExpenseAdapter(getActivity());
         mExpensesView.setAdapter(mAdapter);
 
@@ -96,7 +91,6 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
     public void onResume() {
         super.onResume();
         reloadExpenseData();
-        reloadSharedPreferences();
     }
 
     @Override
@@ -188,14 +182,6 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
                 mAdapter.swapCursor(null);
                 break;
         }
-    }
-
-    private void reloadSharedPreferences() {
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String prefCurrency = sharedPref.getString(SettingsFragment.KEY_PREF_CURRENCY, "");
-
-        mTotalExpCurrencyTextView.setText(prefCurrency);
-        mAdapter.setCurrency(prefCurrency);
     }
 
     private void reloadExpenseData() {

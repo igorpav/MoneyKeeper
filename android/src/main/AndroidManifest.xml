@@ -20,16 +20,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SettingsActivity"
-            android:parentActivityName=".activities.MainActivity"
-            android:screenOrientation="portrait">
-
-            <!-- Parent activity meta-data to support Android 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
-        </activity>
-        <activity
             android:name=".activities.CategoryEditActivity"
             android:parentActivityName=".activities.MainActivity"
             android:screenOrientation="portrait"

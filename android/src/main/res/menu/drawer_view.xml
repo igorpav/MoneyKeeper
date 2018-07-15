@@ -16,10 +16,6 @@
     </group>
     <group android:id="@+id/group2" android:checkableBehavior="none">
         <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_nav_settings"
-            android:title="@string/nav_settings" />
-        <item
             android:title="@string/nav_feedback"
             android:icon="@drawable/ic_nav_feedback"
             android:id="@+id/nav_feedback"/>

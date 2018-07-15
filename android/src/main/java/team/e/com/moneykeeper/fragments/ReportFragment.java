@@ -1,11 +1,9 @@
 package team.e.com.moneykeeper.fragments;
 
 import android.app.DatePickerDialog;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
@@ -85,7 +83,6 @@ public class ReportFragment extends Fragment implements LoaderManager.LoaderCall
     public void onResume() {
         super.onResume();
         reloadReportData();
-        reloadSharedPreferences();
     }
 
     @Override
@@ -190,13 +187,6 @@ public class ReportFragment extends Fragment implements LoaderManager.LoaderCall
         mAdapter.swapCursor(null);
     }
 
-    private void reloadSharedPreferences() {
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        String prefCurrency = sharedPref.getString(SettingsFragment.KEY_PREF_CURRENCY, "");
-
-        mTotalCurrencyTextView.setText(prefCurrency);
-        mAdapter.setCurrency(prefCurrency);
-    }
 
     private void reloadReportData() {
         // Show the progress bar

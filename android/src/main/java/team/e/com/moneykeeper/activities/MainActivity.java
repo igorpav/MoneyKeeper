@@ -123,9 +123,6 @@ public class MainActivity extends BaseFragmentActivity {
             case R.id.nav_feedback:
                 startActivity(new Intent(MainActivity.this,FeedbackActivity.class));
                 break;
-            case R.id.nav_settings:
-                startActivity(new Intent(MainActivity.this, SettingsActivity.class));
-                break;
             default:
                 loadFragment(TodayFragment.class, menuItem.getItemId(), menuItem.getTitle());
         }
