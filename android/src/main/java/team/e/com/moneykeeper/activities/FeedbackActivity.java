@@ -22,7 +22,6 @@ public class FeedbackActivity extends BaseFragmentActivity {
     private void setupActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            // Show the Up button in the action bar (toolbar).
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
     }

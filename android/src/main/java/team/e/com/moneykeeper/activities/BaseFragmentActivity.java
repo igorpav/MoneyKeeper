@@ -22,8 +22,6 @@ public abstract class BaseFragmentActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
-
-        // Set a Toolbar to replace the ActionBar
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
     }

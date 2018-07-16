@@ -24,8 +24,6 @@
             android:parentActivityName=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible">
-
-            <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
@@ -35,8 +33,6 @@
             android:parentActivityName=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateVisible">
-
-            <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
@@ -46,7 +42,15 @@
             android:name=".providers.ExpensesProvider"
             android:authorities="com.github.ematiyuk.expensetracer.provider" />
 
-        <activity android:name=".activities.FeedbackActivity"></activity>
+        <activity
+            android:name=".activities.FeedbackActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
