@@ -11,7 +11,6 @@ public class CategoryEditActivity extends BaseFragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         insertFragment(new CategoryEditFragment());
         setupActionBar();
     }
