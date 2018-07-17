@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import team.e.com.moneykeeper.fragments.CategoryFragment;
 import team.e.com.moneykeeper.R;
 import team.e.com.moneykeeper.fragments.ReportFragment;
+import team.e.com.moneykeeper.fragments.StatsFragment;
 import team.e.com.moneykeeper.fragments.TodayFragment;
 
 public class MainActivity extends BaseFragmentActivity {
@@ -102,6 +103,9 @@ public class MainActivity extends BaseFragmentActivity {
                 break;
             case R.id.nav_categories:
                 loadFragment(CategoryFragment.class, menuItem.getItemId(), menuItem.getTitle());
+                break;
+            case R.id.nav_stats:
+                loadFragment(StatsFragment.class,menuItem.getItemId(),menuItem.getTitle());
                 break;
             case R.id.nav_feedback:
                 startActivity(new Intent(MainActivity.this,FeedbackActivity.class));
