@@ -32,23 +32,17 @@ public class MainActivity extends BaseFragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavDrawer = (NavigationView) findViewById(R.id.nav_drawer);
         mDrawerToggle = setupDrawerToggle();
-        // Tie DrawerLayout events to the ActionBarToggle
         mDrawerLayout.addDrawerListener(mDrawerToggle);
-        // Setup drawer view
         setupDrawerContent(mNavDrawer);
-        // Select TodayFragment on app start by default
         loadTodayFragment();
     }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Pass the event to ActionBarDrawerToggle, if it returns
-        // true, then it has handled the app icon touch event
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
@@ -59,14 +53,12 @@ public class MainActivity extends BaseFragmentActivity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
         mDrawerToggle.syncState();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        // Pass any configuration change to the drawer toggle
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
@@ -78,7 +70,6 @@ public class MainActivity extends BaseFragmentActivity {
             if (!(currentFragment instanceof TodayFragment)) {
                 loadTodayFragment();
             } else {
-                // If current fragment is TodayFragment then exit
                 super.onBackPressed();
             }
         }

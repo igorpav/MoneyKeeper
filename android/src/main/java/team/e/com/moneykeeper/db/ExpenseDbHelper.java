@@ -26,7 +26,6 @@ public class ExpenseDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CategoriesTable.CREATE_TABLE_QUERY);
-        // Fill the table with predefined values
         CategoriesTable.fillTable(db, mContext);
 
         db.execSQL(ExpensesTable.CREATE_TABLE_QUERY);
@@ -34,7 +33,6 @@ public class ExpenseDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        /* Temporary (dummy) upgrade policy */
         db.execSQL(ExpensesTable.DELETE_TABLE_QUERY);
         db.execSQL(CategoriesTable.DELETE_TABLE_QUERY);
         onCreate(db);

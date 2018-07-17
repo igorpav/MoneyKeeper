@@ -44,7 +44,6 @@ public class CategoryFragment extends Fragment implements LoaderManager.LoaderCa
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_category, container, false);
 
         mCategoriesView = (ListView) rootView.findViewById(R.id.categories_list_view);
@@ -79,8 +78,6 @@ public class CategoryFragment extends Fragment implements LoaderManager.LoaderCa
                 new int[] { R.id.category_name_list_item}, 0);
 
         mCategoriesView.setAdapter(mAdapter);
-
-        // Initialize the CursorLoader
         getLoaderManager().initLoader(0, null, this);
     }
 
@@ -143,7 +140,6 @@ public class CategoryFragment extends Fragment implements LoaderManager.LoaderCa
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        // Hide the progress bar
         mProgressBar.setVisibility(View.GONE);
 
         mAdapter.swapCursor(data);
@@ -155,19 +151,13 @@ public class CategoryFragment extends Fragment implements LoaderManager.LoaderCa
     }
 
     private void reloadCategoryList() {
-        // Show the progress bar
         mProgressBar.setVisibility(View.VISIBLE);
-        // Reload data by restarting the cursor loader
         getLoaderManager().restartLoader(0, null, this);
     }
 
     private int deleteSingleCategory(long categoryId) {
         Uri uri = ContentUris.withAppendedId(Categories.CONTENT_URI, categoryId);
-
-        // Defines a variable to contain the number of rows deleted
         int rowsDeleted;
-
-        // Deletes the category that matches the selection criteria
         rowsDeleted = getActivity().getContentResolver().delete(
                 uri,        // the URI of the row to delete
                 null,       // where clause

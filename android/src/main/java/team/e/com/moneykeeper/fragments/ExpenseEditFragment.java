@@ -54,16 +54,12 @@ public class ExpenseEditFragment extends Fragment implements LoaderManager.Loade
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_expense_edit, container, false);
-
         mExpValueEditText = (EditText) rootView.findViewById(R.id.expense_value_edit_text);
         mCatProgressBar = rootView.findViewById(R.id.cat_select_progress_bar);
         mCategorySpinner = (AppCompatSpinner) rootView.findViewById(R.id.category_choose_spinner);
 
         setEditTextDefaultValue();
-
-        // Set listener on Done (submit) button on keyboard clicked
         mExpValueEditText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int keyCode, KeyEvent event) {
@@ -99,18 +95,13 @@ public class ExpenseEditFragment extends Fragment implements LoaderManager.Loade
                 new String[] { Categories.NAME },
                 new int[] { android.R.id.text1 },
                 0);
-        // Specify the layout to use when the list of choices appears
         mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         mCategorySpinner.setAdapter(mAdapter);
 
         mExtraValue = getActivity().getIntent().getLongExtra(EXTRA_EDIT_EXPENSE, -1);
-        // Create a new expense
         if (mExtraValue < 1) {
             getActivity().setTitle(R.string.add_expense);
             loadCategories();
-
-            // Edit existing expense
         } else {
             getActivity().setTitle(R.string.edit_expense);
             loadExpenseData();
@@ -131,8 +122,6 @@ public class ExpenseEditFragment extends Fragment implements LoaderManager.Loade
                     // Create a new expense
                     if (mExtraValue < 1) {
                         insertNewExpense();
-
-                    // Edit existing expense
                     } else {
                         updateExpense(mExtraValue);
                     }
@@ -149,7 +138,6 @@ public class ExpenseEditFragment extends Fragment implements LoaderManager.Loade
             mExpValueEditText.selectAll();
             return false;
         }
-        // Future check of other fields
 
         return true;
     }
@@ -172,7 +160,6 @@ public class ExpenseEditFragment extends Fragment implements LoaderManager.Loade
     }
 
     private void loadCategories() {
-        // Show the progress bar next to category spinner
         mCatProgressBar.setVisibility(View.VISIBLE);
 
         getLoaderManager().initLoader(CATEGORIES_LOADER_ID, null, this);
@@ -241,7 +228,6 @@ public class ExpenseEditFragment extends Fragment implements LoaderManager.Loade
 
                 if (null == data || data.getCount() < 1) {
                     mExpenseCategoryId = -1;
-                    // Fill the spinner with default values
                     ArrayList<String> defaultItems = new ArrayList<>();
                     defaultItems.add(getResources().getString(R.string.no_categories_string));
 
@@ -249,14 +235,10 @@ public class ExpenseEditFragment extends Fragment implements LoaderManager.Loade
                             android.R.layout.simple_spinner_item,
                             defaultItems);
                     mCategorySpinner.setAdapter(tempAdapter);
-                    // Disable the spinner
                     mCategorySpinner.setEnabled(false);
                 } else {
-                    // Set the original adapter
                     mCategorySpinner.setAdapter(mAdapter);
-                    // Update spinner data
                     mAdapter.swapCursor(data);
-                    // Enable the spinner
                     mCategorySpinner.setEnabled(true);
                     updateSpinnerSelection();
                 }

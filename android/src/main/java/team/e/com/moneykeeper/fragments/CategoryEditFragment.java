@@ -38,12 +38,10 @@ public class CategoryEditFragment extends Fragment implements LoaderManager.Load
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_category_edit, container, false);
 
         mCatNameEditText = (EditText) rootView.findViewById(R.id.category_name_edit_text);
 
-        // Set listener on Done (submit) button on keyboard clicked
         mCatNameEditText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int keyCode, KeyEvent event) {
@@ -63,11 +61,9 @@ public class CategoryEditFragment extends Fragment implements LoaderManager.Load
         super.onActivityCreated(savedInstanceState);
 
         mExtraValue = getActivity().getIntent().getLongExtra(EXTRA_EDIT_CATEGORY, -1);
-        // Create a new category
         if (mExtraValue < 1) {
             getActivity().setTitle(R.string.add_category);
 
-        // Edit existing category
         } else {
             getActivity().setTitle(R.string.edit_category);
             setCategoryData();
@@ -85,11 +81,9 @@ public class CategoryEditFragment extends Fragment implements LoaderManager.Load
         switch (item.getItemId()) {
             case R.id.done_category_edit_menu_item:
                 if (checkEditTextForEmptyField(mCatNameEditText)) {
-                    // Create a new category
                     if (mExtraValue < 1) {
                         insertNewCategory();
 
-                    // Edit existing category
                     } else {
                         updateCategory(mExtraValue);
                     }

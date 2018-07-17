@@ -27,7 +27,6 @@ public abstract class BaseFragmentActivity extends AppCompatActivity {
     }
 
     protected void insertFragment(Fragment fragment) {
-        // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.content_frame, fragment)

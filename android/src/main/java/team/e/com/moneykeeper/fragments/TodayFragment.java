@@ -52,7 +52,6 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_today, container, false);
 
         mExpensesView = (ListView) rootView.findViewById(R.id.expenses_list_view);
@@ -82,7 +81,6 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
         mAdapter = new SimpleExpenseAdapter(getActivity());
         mExpensesView.setAdapter(mAdapter);
 
-        // Initialize the CursorLoaders
         getLoaderManager().initLoader(SUM_LOADER_ID, null, this);
         getLoaderManager().initLoader(LIST_LOADER_ID, null, this);
     }
@@ -140,7 +138,6 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
                 break;
         }
 
-        // Retrieve today's date string
         String today = Utils.getDateString(new Date());
         String[] selectionArgs = { today };
 
@@ -164,9 +161,7 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
                 break;
 
             case LIST_LOADER_ID:
-                // Hide the progress bar
                 mProgressBar.setVisibility(View.GONE);
-
                 mAdapter.swapCursor(data);
                 break;
         }
@@ -185,24 +180,19 @@ public class TodayFragment extends Fragment implements LoaderManager.LoaderCallb
     }
 
     private void reloadExpenseData() {
-        // Show the progress bar
         mProgressBar.setVisibility(View.VISIBLE);
-        // Reload data by restarting the cursor loaders
         getLoaderManager().restartLoader(LIST_LOADER_ID, null, this);
         getLoaderManager().restartLoader(SUM_LOADER_ID, null, this);
     }
 
     private int deleteSingleExpense(long expenseId) {
         Uri uri = ContentUris.withAppendedId(Expenses.CONTENT_URI, expenseId);
-
-        // Defines a variable to contain the number of rows deleted
         int rowsDeleted;
 
-        // Deletes the expense that matches the selection criteria
         rowsDeleted = getActivity().getContentResolver().delete(
-                uri,        // the URI of the row to delete
-                null,       // where clause
-                null        // where args
+                uri,
+                null,
+                null
         );
 
         showStatusMessage(getResources().getString(R.string.expense_deleted));
