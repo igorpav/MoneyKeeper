@@ -7,7 +7,7 @@ public final class ExpensesContract {
     /**
      * The authority for the expenses provider
      */
-    public static final String AUTHORITY = "com.github.ematiyuk.expensetracer.provider";
+    public static final String AUTHORITY = "team.e.com.moneykeeper.provider";
     /**
      * The content:// style URI for expenses provider
      */
@@ -100,9 +100,7 @@ public final class ExpensesContract {
 
         /**
          * The MIME type of a {@link #CONTENT_URI} sub-directory of a single expense with a category.
-         */
-//        public static final String CONTENT_ITEM_TYPE =
-//                "vnd.android.cursor.item/vnd.ematiyuk.expensetracer.provider.expense_with_category";
+         *
 
         /**
          * The content:// style URI for this joined table to filter items by a specific date.

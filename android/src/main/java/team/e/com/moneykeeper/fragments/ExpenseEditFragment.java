@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class ExpenseEditFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
-    public static final String EXTRA_EDIT_EXPENSE = "com.github.ematiyuk.expensetracer.edit_expense";
+    public static final String EXTRA_EDIT_EXPENSE = "team.e.com.moneykeeper.edit_expense";
 
     private static final int EXPENSE_LOADER_ID = 1;
     private static final int CATEGORIES_LOADER_ID = 0;

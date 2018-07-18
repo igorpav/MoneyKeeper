@@ -47,7 +47,6 @@ public class SectionExpenseAdapter extends SectionCursorAdapter {
     @Override
     protected void bindItemView(View convertView, Context context, Cursor cursor) {
         TextView tvExpenseValue = (TextView) convertView.findViewById(R.id.expense_value_text_view);
-        TextView tvExpenseCurrency = (TextView) convertView.findViewById(R.id.expense_currency_text_view);
         TextView tvExpenseCatName = (TextView) convertView.findViewById(R.id.expense_category_name_text_view);
 
         float expValue = cursor.getFloat(cursor.getColumnIndexOrThrow(ExpensesContract.Expenses.VALUE));
@@ -55,6 +54,5 @@ public class SectionExpenseAdapter extends SectionCursorAdapter {
 
         tvExpenseValue.setText(Utils.formatToCurrency(expValue));
         tvExpenseCatName.setText(categoryName);
-        tvExpenseCurrency.setText(mCurrency);
     }
 }

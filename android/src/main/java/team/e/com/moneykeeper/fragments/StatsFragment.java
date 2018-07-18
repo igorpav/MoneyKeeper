@@ -23,10 +23,10 @@ public class StatsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_stats, container, false);
         PieChart mPieChart = (PieChart) v.findViewById(R.id.piechart);
-        mPieChart.addPieSlice(new PieModel("Freetime", 15, Color.parseColor("#FE6DA8")));
-        mPieChart.addPieSlice(new PieModel("Sleep", 25, Color.parseColor("#56B7F1")));
-        mPieChart.addPieSlice(new PieModel("Work", 35, Color.parseColor("#CDA67F")));
-        mPieChart.addPieSlice(new PieModel("Eating", 9, Color.parseColor("#FED70E")));
+        mPieChart.addPieSlice(new PieModel("Питание", 1000, Color.parseColor("#FE6DA8")));
+        mPieChart.addPieSlice(new PieModel("Развлечения", 800, Color.parseColor("#56B7F1")));
+        mPieChart.addPieSlice(new PieModel("Подарки", 1000, Color.parseColor("#CDA67F")));
+        mPieChart.addPieSlice(new PieModel("Транспорт", 3000, Color.parseColor("#FED70E")));
         mPieChart.startAnimation();
         return v;
     }

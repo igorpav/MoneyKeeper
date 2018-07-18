@@ -15,7 +15,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -32,7 +31,7 @@
 
         <provider
             android:name=".providers.ExpensesProvider"
-            android:authorities="com.github.ematiyuk.expensetracer.provider" />
+            android:authorities="team.e.com.moneykeeper.provider" />
 
         <activity
             android:name=".activities.FeedbackActivity"

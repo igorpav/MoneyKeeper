@@ -24,7 +24,7 @@ import team.e.com.moneykeeper.providers.ExpensesContract.Categories;
 import team.e.com.moneykeeper.R;
 
 public class CategoryEditFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
-    public static final String EXTRA_EDIT_CATEGORY = "com.github.ematiyuk.expensetracer.edit_category";
+    public static final String EXTRA_EDIT_CATEGORY = "team.e.com.moneykeeper.edit_category";
 
     private EditText mCatNameEditText;
     private long mExtraValue;
